@@ -1,0 +1,48 @@
+h1.title {display: none;}
+
+body { 
+    font-size: 18px;
+    line-height: 1.6;} 
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold; } 
+
+h1 { font-size: 2em; } 
+h2 { font-size: 1.75em; } 
+h3 { font-size: 1.60em; } 
+h4{ font-size: 1.50em; } 
+h5 { font-size: 1.30em; } 
+h6 { font-size: 1.25em; } 
+
+.pull-left {
+  float: left;
+  width: 50%;
+}
+
+.pull-right {
+  float: right;
+  width: 40%;
+}
+
+a:link {
+  color: #071059;
+}
+
+/* visited link */
+a:visited {
+  color: #071059;
+}
+
+/* mouse over link */
+a:hover {
+  color: #4DB797;
+}
+
+/* selected link */
+a:active {
+  color: #071059;
+}
+
+.btn-primary:link, .btn-primary:visited, .btn-primary:hover, .btn-primary:active {
+    color: white;
+    font-weight: bold;
+}
