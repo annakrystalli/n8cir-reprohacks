@@ -86,7 +86,7 @@ also start discussions or add comments through our collaborative
 
 ### **Participants**
 
-#### **Introduction & Welcome** [slides]()
+#### **Introduction & Welcome** [slides](https://hackmd.io/@annakrystalli/n8-reprohack-intro)
 
 #### **1. Paper review and team formation**
 

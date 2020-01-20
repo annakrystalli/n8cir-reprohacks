@@ -11,7 +11,7 @@ params:
   longitude: -1.48036
   registration_url: null
   hackpad_url: https://hackmd.io/@annakrystalli/n8-reprohack/edit
-  intro_slides_url: 
+  intro_slides_url: https://hackmd.io/@annakrystalli/n8-reprohack-intro
   submission_url: https://forms.gle/vMk25vCevMg2QiYQ9
   feedback_url: https://link-to-feedbackform
   paper_shinyapp_url: https://sheffield-university.shinyapps.io/n8cir-reprohacks/
