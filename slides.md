@@ -6,7 +6,7 @@ slideOptions:
     theme: white
 ---
 
-# Welcome to our ReproHack!
+## Welcome to the N8 CIR ReproHack Series!
 
 <!-- Put the link to this slide here so people can follow -->
 ### Event Repository: http://bit.ly/n8-reprohacks
@@ -127,6 +127,7 @@ Event governed by [**ReproHack Code of Conduct**](https://docs.carpentries.org/t
 - How easy / automated was installation?
 - Did you have any problems?
 
+---
 
 ## Data
 - Were data clearly separated from code and other items?
@@ -143,6 +144,7 @@ Was there adequate documentation describing:
 - how to use materials to reproduce the paper?
 - how to cite the materials, ideally in a form that can be copy and pasted?
 
+---
 
 ## Analysis
 
@@ -151,7 +153,10 @@ Was there adequate documentation describing:
 - How easy was it to link analysis code to:
    - the plots it generates
    - sections in the manuscript in which it is described
- 
+
+---
+## Analysis
+
 ### If the analysis was not fully reproducible :no_entry_sign:
  - Did results (e.g. model outputs, tables, figures) differ to those published? By how much?
  - Were missing dependencies?
@@ -186,12 +191,11 @@ Was there adequate documentation describing:
 
 <br>
 
-### Acknowledge author effort
+#### Acknowledge author effort
 
-### Give feedback in good faith
+#### Give feedback in good faith
 
-### Focus on community benefits
-- and system level solutions
+#### Focus on community benefits and system level solutions
 
 ---
 
@@ -227,8 +231,9 @@ Was there adequate documentation describing:
 
 > **ReScience C** is an open-access peer-reviewed journal that targets computational research and encourages the **explicit replication** of already published research, promoting new and open-source implementations in order to ensure that the original research is reproducible.
 
+---
 
-### What is **Replication:** 
+### What is a **Replication:** 
 - Repeating a published protocol
 - Respecting its spirit and intentions
 -  **Varying the technical details**, e.g. using different software, initial conditions, etc.
@@ -253,7 +258,7 @@ Was there adequate documentation describing:
 + Add your details to the [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit).
 + Register your team and paper on the [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit)
 
-
+---
 
 ## 3. Mid-point regroup
 
