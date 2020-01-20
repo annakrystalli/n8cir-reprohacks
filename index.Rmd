@@ -39,24 +39,24 @@ library(leaflet)
 library(dplyr)
 
 event_log <- readr::read_csv("data/event-log.csv") %>% 
-    mutate(upcoming =  date >= Sys.Date()) %>%
-    mutate(popup = glue::glue("<h3><a href={url} {title}></h3><br>{date}"),
-           date_f = format(date, format="%a %b %d %Y"))
+  mutate(upcoming =  date >= Sys.Date()) %>%
+  mutate(popup = glue::glue("<h3><a href={url} {title}></h3><br>{date}"),
+         date_f = format(date, format="%a %b %d %Y"))
 
 plot_log <- event_log %>%
-    mutate(color = case_when(upcoming == TRUE ~ "green",
-                             upcoming == FALSE ~ "orange"))
+  mutate(color = case_when(upcoming == TRUE ~ "green",
+                           upcoming == FALSE ~ "orange"))
 
 
 #pal <- colorFactor(c("green", "orange"), c(FALSE, TRUE))
 
 make_popup <- function(df){
-    popup_row <- function(x){paste0(
-      "<h3><a href=", x["url"], "> ", x["title"],"</a></h3>", " <br>", 
-      "<strong> Date: </strong>", x["date_f"], "<br>",
-      "<strong> Room: </strong>", x["room"], "<br>",
-      "<strong> Address: </strong>", x["address"], "<br>")}
-    apply(df, 1, popup_row)
+  popup_row <- function(x){paste0(
+    "<h3><a href=", x["url"], "> ", x["title"],"</a></h3>", " <br>", 
+    "<strong> Date: </strong>", x["date_f"], "<br>",
+    "<strong> Room: </strong>", x["room"], "<br>",
+    "<strong> Address: </strong>", x["address"], "<br>")}
+  apply(df, 1, popup_row)
 }
 
 icons <- awesomeIcons(
@@ -67,9 +67,9 @@ icons <- awesomeIcons(
 )
 
 plot_log %>%
-    leaflet() %>%
-    addProviderTiles("CartoDB.Positron") %>%
-    addAwesomeMarkers(icon = icons, popup = make_popup(plot_log))
+  leaflet() %>%
+  addProviderTiles("CartoDB.Positron") %>%
+  addAwesomeMarkers(icon = icons, popup = make_popup(plot_log))
 ```
 
 
@@ -82,7 +82,9 @@ if(!is.null(params$registration_url)){
 }
 ```
 
-[![Gitter](https://badges.gitter.im/reprohack/community.svg)](https://gitter.im/reprohack/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+[![Slack](https://img.shields.io/badge/slack-join%20us-brightgreen)](https://reprohack-autoinvite.herokuapp.com/)
+
 
 ##### [workshop repository](`r params$reprohack_repo_url`): containing details for participants
 
@@ -160,8 +162,8 @@ We invite nominations for papers that have both associated **code** and **data**
 
 ```{r, echo=FALSE}
 library("shiny")
- wellPanel(a("Nominate Paper", class = "btn btn-primary btn-md",
-          href = params$submission_url))
+wellPanel(a("Nominate Paper", class = "btn btn-primary btn-md",
+            href = params$submission_url))
 ```
 
 
@@ -178,13 +180,13 @@ options(gargle_oauth_cache = ".secrets")
 print_contact_links <- function(responses, i){
   row <- responses[i, ]
   twitter <- if(!is.na(row[,"Twitter handle (optional)"])){
-  twitter_url <- paste0("https://twitter.com/", gsub(" *@ *", "", row[,"Twitter handle (optional)"]))
-  paste0("[<i class='fa fa-twitter'/>](", twitter_url,")")}else{NULL}
+    twitter_url <- paste0("https://twitter.com/", gsub(" *@ *", "", row[,"Twitter handle (optional)"]))
+    paste0("[<i class='fa fa-twitter'/>](", twitter_url,")")}else{NULL}
   
   github <- if(!is.na(row[,"GitHub username (optional)"])){
-  github_url <- paste0("https://github.com/", gsub(" *@ *", "", row[,"GitHub username (optional)"]))
-  paste0("[<i class='fa fa-github'/>](", github_url,")")}else{NULL}
-
+    github_url <- paste0("https://github.com/", gsub(" *@ *", "", row[,"GitHub username (optional)"]))
+    paste0("[<i class='fa fa-github'/>](", github_url,")")}else{NULL}
+  
   feedback <- if(row[, "Would you like to receive a copy of any feedback on the paper?"] == "Yes"){
     "<i class='fa fa-comment-dots'/>"}else{NULL}
   public <- if(row[,"Can feedback on your paper be made public?"] == "Yes"){
@@ -199,14 +201,19 @@ print_contact_links <- function(responses, i){
 responses_gs <- sheets_find(paste(params$submission_form_title))
 responses <- sheets_read(responses_gs)
 
-if(nrow(responses) > 0){
+row_n <- nrow(responses)
+set.seed(params$latitude * params$longitude)
 
-for(i in 1:nrow(responses)){
-  cat("<div class='card'>")
+if(row_n > 0){
+  
+  random_ids <- sample.int(row_n)
+  for(j in seq_len(row_n)){
+    i <- random_ids[j]
+    cat("<div class='card'>")
     cat('\n')     
     cat('\n')
     cat('\n')
-    cat("### **", i,". ", as.character(responses[i, "Paper title"]), "**", "\n", "\n", sep = "")
+    cat("### **", j,". ", as.character(responses[i, "Paper title"]), "**", "\n", "\n", sep = "")
     cat("**", gsub("\n", "", gsub("[*]", "", as.character(responses[i, "Paper citation"]))), "\n**", "\n", "\n", sep = "")
     cat("##### *submitted by ", as.character(responses[i, "Name"]),  print_contact_links(responses, i), "*", "\n")
     cat('\n')
@@ -223,16 +230,16 @@ for(i in 1:nrow(responses)){
     cat("**Useful programming skills:**", as.character(responses[i, "Useful programming skills"]), "\n")
     cat("</div>")
     cat('\n', "\n",'\n')
-}
-
+  }
+  
 }
 ```
 
 
 
 ```{r, echo=FALSE}
- wellPanel(a("Refresh proposal list", class = "btn btn-primary btn-md",
-          href = "javascript:history.go(0)"))
+wellPanel(a("Refresh proposal list", class = "btn btn-primary btn-md",
+            href = "javascript:history.go(0)"))
 ```
 
 
@@ -255,12 +262,12 @@ We've run **two ReproHacks so far** as part of satellite OpenCon events (Berlin 
 
 ### Get in touch
 
-Chat to us on [**gitter**](https://gitter.im/reprohack/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) or email [a.krystalli@sheffield.ac.uk](mailto:a.krystalli@sheffield.ac.uk).
+Chat to us on [Slack](https://reprohack-autoinvite.herokuapp.com/) or email [reprohack@googlegroups.com](mailto:reprohack@googlegroups.com).
 
 </div>
 
 <div class="pull-right">
-<img src="https://www.software.ac.uk/sites/default/files/images/content/SSI_Big300dpi.png" height="100px" width="300px">
+<img src="https://www.software.ac.uk/sites/default/files/images/content/SSI_Big300dpi.png" width="100%">
 </div>
 
 
