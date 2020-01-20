@@ -4,3 +4,5 @@
 .Ruserdata
 .httr-oauth
 .secrets
+rsconnect/*
+.DS_Store
