@@ -3,19 +3,21 @@
 
 ![](https://github.com/reprohack/reprohack-hq/raw/master/assets/reprohack-banner.png)
 
-# Welcome to the **Awesome conference / organiser \#ReproHack**\!
+# Welcome to the **N8 CIR ‘Northern Tour’ ReproHack series**\!
 
 <br>
 
-#### :date: **27th June 2019**
+#### :date: **21 Jan - 12 Mar 2020**
 
-#### :alarm\_clock: **9.30am-15:30pm**
+#### :alarm\_clock: **10:00am-17:00pm**
 
-##### :round\_pushpin: **Ada Lovelace Seminar Room, Dept. of Computer Science**
+##### :round\_pushpin: **Multiple locations**
 
-##### :earth\_africa: [**The University of Sheffield, 211 Portobello, Sheffield S1 4DP**](https://www.openstreetmap.org/?mlat=53.38119&mlon=-1.48036#map=19/53.38119/-1.48036)
+##### :earth\_africa: **Newcastle, York, Leeds, Sheffield, Manchester**
 
-[![Gitter](https://badges.gitter.im/reprohack/community.svg)](https://gitter.im/reprohack/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+<img src="README_files/figure-gfm/unnamed-chunk-2-1.png" width="60%" />
+
+[![Slack](https://img.shields.io/badge/slack-join%20us-brightgreen)](https://reprohack-autoinvite.herokuapp.com/)
 
 -----
 
@@ -38,7 +40,7 @@ community as a whole.
 
 ## **Two ways to get involved:**
 
-### **[Nominate a paper](https://link-to-submissionform)**
+### **[Nominate a paper](https://forms.gle/vMk25vCevMg2QiYQ9)**
 
 We invite nominations for papers that have both associated **code** and
 **data** publicly available. We also encourage analyses based on open
@@ -46,7 +48,7 @@ source tools as we cannot guarantee participants will have access to
 specialised licenced software.
 
 [**Current list of proposed papers and
-projects**](https://youraccount.shinyapps.io/reprohack-awesome-conf)
+projects**](https://sheffield-university.shinyapps.io/n8cir-reprohacks/)
 
 <br>
 
@@ -60,72 +62,84 @@ more\!
 
 This is the master repo of the hack. We’ll collect information on the
 teams and projects through
-[issues](https://github.com/your_account/reprohack-location-ISOdate/issues/)
-in this repo. We’ll track of discussions and collaborative notes on the
-event [**hackpad**](https://hackmd.io/link-to-copy-of-hackpad/edit)
+[issues](https://github.com/annakrystalli/n8cir-reprohacks/issues/) in
+this repo. We’ll track of discussions and collaborative notes on the
+event [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit)
 
-As all Carpentries events, we strive to make this event open and
-inclusive to all. As such the event is governed by the [Carpentries Code
-of
-Conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html)
+As all ReproHack events, we strive to make this event open and inclusive
+to all. As such the event is governed by the [ReproHack Code of
+Conduct](https://github.com/reprohack/reprohack-hq/blob/master/CODE_OF_CONDUCT.md)
 and you should read it before participating. By participating, you are
 expected to uphold this code.
 
 ### **Authors**
 
 We encourage authors that are keen, to be available for participants to
-reach out to for guidance or even just to say hello\! We’ve set up a
-[**gitter channel**](https://gitter.im/reprohack/community) as a public
-lobby where you can also reach the organisers prior to the hack. You can
+reach out to for guidance or even just to say hello\! You can do so by
+joining the **`review-chat`** channel in our
+[**slack**](https://reprohack-autoinvite.herokuapp.com/) group. We’ve
+also set up an **`authors`** channel in our
+[**slack**](https://reprohack-autoinvite.herokuapp.com/) group as a
+place where you can also reach the organisers prior to the hack. You can
 also start discussions or add comments through our collaborative
-[**hackpad**](https://hackmd.io/link-to-copy-of-hackpad/edit).
+[**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit).
 
 ### **Participants**
 
 #### **Introduction & Welcome** [slides]()
 
-#### **1. Project review and team formation**
+#### **1. Paper review and team formation**
 
 We’ll start with a brief review of the [**papers
-proposed**](https://youraccount.shinyapps.io/reprohack-awesome-conf) and
-then form into teams.
+proposed**](https://sheffield-university.shinyapps.io/n8cir-reprohacks/)
+and then form into teams. Feel free to work on your own if you prefer
+but we highly recommend you discuss your experiences with fellow
+participants as you work.
 
-#### **2. Select and register your project**
+#### **2. Select and register a paper**
 
-  - In your teams **decide which paper/hack topic** you wish to work on.
-  - To register your team and paper / topic [**open a new
-    issue**](https://github.com/your_account/reprohack-location-ISOdate/issues/new/choose)
-    in this repository using the issue templates provided.
-  - **Complete details** and create.
-  - Please also add each individual participants details in the relevant
-    section of the
-    [**hackpad**](https://hackmd.io/link-to-copy-of-hackpad/edit) so we
-    have a complete list of participants.
+  - Add your details in the **participants** section of the
+    [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit) so
+    we have a complete list of participants.
 
-#### **3. Work on your project\!**
+  - In your teams **decide which paper** you wish to work on.
+
+  - **Register your team and paper** by logging the title of the
+    selected paper and the name(s) of the reviewer(s) in the
+    [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit).
+    You can use the following template:
+    
+        ### **Paper:** <Title of the paper reproduced>
+        **Reviewers:** Reviewer 1, Reviewer 2 etc.
+
+#### **3. Work on your paper\!**
 
 Follow any instructions/documentation associated with the papers and try
 and reproduce the work. As you work through your paper, keep in mind the
-main points on which feedback to the authors will provided,
+main points on which feedback to the authors will provided, **Access**,
 **Reproducibility**, **Documentation** and **Reusability**. It might
 help to have a look at the [feedback form](https://link-to-feedbackform)
 before you begin and keep notes during. Feel free to use the event
-hackpad for that.
+hackpad to record general findings you wish to share with the group.
 
 We’ll **come together during the day** to discuss progress and
 troubleshoot any sticking points.
 
-Should you finish reproducing your paper quickly, you might want to
-consider attempting to **replicate** the results, for example, if the
-code is in R consider translating the analysis to python and examining
-whether you are getting the same results. Such a contribution would be
-appropriate for publication in the **ReScience C** journal\! Have a look
-at the journals [website](http://rescience.github.io/write/) for further
-details.
+Should you finish reproducing your paper quickly, feel free to explore
+the work more deeply. For example, you could try and run additional
+analyses, create new plots or even combine materials with your own or
+other open materials available on the web\!
+
+You might want to consider attempting to **replicate** the results, for
+example, if the code is in R consider translating the analysis to python
+and examining whether you are getting the same results. Such a
+contribution would be appropriate for publication in the **ReScience C**
+journal\! Have a look at the journals
+[website](http://rescience.github.io/write/) for further details.
 
 Should you produce any additional materials relating to your
 reproduction during the session, we ask that you **share it publicly**
-and **update your team’s issue with any relevant URLs**.
+and **add any links to such materials to the hackpad**.
 
 #### **4. Leave feedback for the authors**
 
@@ -147,8 +161,8 @@ You can use the hackpad to take notes and summarise your experiences.
 #### Collaborative note taking:
 
 Feel free to contribute any additional thoughts on our collaborative
-[**hackpad**](https://hackmd.io/link-to-copy-of-hackpad/edit). These can
-help form the basis for a blogpost on the
+[**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit). These
+can help form the basis for a blogpost on the
 event.
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This
