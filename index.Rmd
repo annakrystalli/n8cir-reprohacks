@@ -1,30 +1,30 @@
 ---
-title: "CarpentryConnect Manchester 2019"
+title: "N8 CIR 'Northern Tour' ReproHack series"
 output:
     html_document:
         theme: flatly
         css: reprohack.css
 params: 
-  title: "Awesome conference / organiser"
-  room_location: "Ada Lovelace Seminar Room, Dept. of Computer Science"
-  address: "The University of Sheffield, 211 Portobello, Sheffield S1 4DP"
-  date: "27th June 2019"
-  time: "9.30am-15:30pm"
-  bannerurl: "https://github.com/reprohack/reprohack-hq/raw/master/assets/reprohack-banner.png"
+  title: "N8 CIR 'Northern Tour' ReproHack series"
+  room_location: "Multiple locations"
+  address: "Newcastle, York, Leeds, Sheffield, Manchester"
+  date: "21 Jan - 12 Mar 2020"
+  time: "10:00am-17:00pm"
+  bannerurl: "reprohack-banner.png"
   latitude: 53.38119
   longitude: -1.48036
-  registration_url: null
-  hackpad_url: https://hackmd.io/link-to-copy-of-hackpad/edit
-  submission_url: https://link-to-submissionform
-  reprohack_repo_url: https://github.com/your_account/reprohack-location-ISOdate
-  submission_form_title: ReproHack Paper Submission Form - your event
+  registration_url: https://n8cir.org.uk/news/reprohacks/ 
+  hackpad_url: https://hackmd.io/@annakrystalli/n8-reprohack/edit
+  submission_url: https://forms.gle/vMk25vCevMg2QiYQ9
+  reprohack_repo_url: https://github.com/annakrystalli/n8cir-reprohacks
+  submission_form_title: ReproHack Paper Submission Form - n8
 runtime: shiny
 ---
 
 ![](`r params$bannerurl`)
 
-# **ReproHack @ `r params$title`**
-## _A hands-on Reproducibility Hackathon_
+# **`r params$title`**
+## _A series of hands-on Reproducibility Hackathon_
 
 <br>
 
@@ -32,7 +32,49 @@ runtime: shiny
 #### **`r shiny::icon("calendar")` `r params$date`**
 #### **`r shiny::icon("map-marker-alt")` `r params$room_location`**
 #### **`r shiny::icon("map-marked-alt")` `r params$address`**
-  
+
+
+```{r out.width='100%', fig.height=6, eval=require('leaflet'), echo=FALSE, message=FALSE, warning=FALSE}
+library(leaflet)
+library(dplyr)
+
+event_log <- readr::read_csv("data/event-log.csv") %>% 
+    mutate(upcoming =  date >= Sys.Date()) %>%
+    mutate(popup = glue::glue("<h3><a href={url} {title}></h3><br>{date}"),
+           date_f = format(date, format="%a %b %d %Y"))
+
+plot_log <- event_log %>%
+    mutate(color = case_when(upcoming == TRUE ~ "green",
+                             upcoming == FALSE ~ "orange"))
+
+
+#pal <- colorFactor(c("green", "orange"), c(FALSE, TRUE))
+
+make_popup <- function(df){
+    popup_row <- function(x){paste0(
+      "<h3><a href=", x["url"], "> ", x["title"],"</a></h3>", " <br>", 
+      "<strong> Date: </strong>", x["date_f"], "<br>",
+      "<strong> Room: </strong>", x["room"], "<br>",
+      "<strong> Address: </strong>", x["address"], "<br>")}
+    apply(df, 1, popup_row)
+}
+
+icons <- awesomeIcons(
+  icon = 'ios-close',
+  iconColor = 'black',
+  library = 'ion',
+  markerColor = plot_log$color
+)
+
+plot_log %>%
+    leaflet() %>%
+    addProviderTiles("CartoDB.Positron") %>%
+    addAwesomeMarkers(icon = icons, popup = make_popup(plot_log))
+```
+
+
+***
+
 
 ```{r, echo = F, results='asis'}
 if(!is.null(params$registration_url)){
@@ -160,6 +202,7 @@ responses <- sheets_read(responses_gs)
 if(nrow(responses) > 0){
 
 for(i in 1:nrow(responses)){
+  cat("<div class='card'>")
     cat('\n')     
     cat('\n')
     cat('\n')
@@ -178,6 +221,7 @@ for(i in 1:nrow(responses)){
     cat("**Code URL:**", as.character(responses[i, "Code URL"]), "\n")
     cat('\n', "\n")
     cat("**Useful programming skills:**", as.character(responses[i, "Useful programming skills"]), "\n")
+    cat("</div>")
     cat('\n', "\n",'\n')
 }
 
@@ -195,19 +239,6 @@ for(i in 1:nrow(responses)){
 
 ***
 
-
-### Event location
-
-```{r out.width='100%', fig.height=6, eval=require('leaflet'), echo=FALSE}
-library(leaflet)
-leaflet() %>% addTiles() %>% setView(params$longitude, params$latitude, zoom = 17) %>%
-  addMarkers(params$longitude, params$latitude)
-```
-
-
-
-
-***
 
 ### ReproHack History
 
