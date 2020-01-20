@@ -1,20 +1,21 @@
 ---
 output: github_document
 params: 
-  title: "Awesome conference / organiser"
-  room_location: "Ada Lovelace Seminar Room, Dept. of Computer Science"
-  address: "The University of Sheffield, 211 Portobello, Sheffield S1 4DP"
-  date: "27th June 2019"
-  time: "9.30am-15:30pm"
+  title: "N8 CIR 'Northern Tour' ReproHack series"
+  room_location: "Multiple locations"
+  address: "Newcastle, York, Leeds, Sheffield, Manchester"
+  date: "21 Jan - 12 Mar 2020"
+  time: "10:00am-17:00pm"
   bannerurl: "https://github.com/reprohack/reprohack-hq/raw/master/assets/reprohack-banner.png"
   latitude: 53.38119
   longitude: -1.48036
   registration_url: null
-  hackpad_url: https://hackmd.io/link-to-copy-of-hackpad/edit
-  submission_url: https://link-to-submissionform
+  hackpad_url: https://hackmd.io/@annakrystalli/n8-reprohack/edit
+  intro_slides_url: 
+  submission_url: https://forms.gle/vMk25vCevMg2QiYQ9
   feedback_url: https://link-to-feedbackform
-  paper_shinyapp_url: https://youraccount.shinyapps.io/reprohack-awesome-conf
-  reprohack_repo_url: https://github.com/your_account/reprohack-location-ISOdate
+  paper_shinyapp_url: https://sheffield-university.shinyapps.io/n8cir-reprohacks/
+  reprohack_repo_url: https://github.com/annakrystalli/n8cir-reprohacks
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -26,18 +27,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r, echo=FALSE}
-openstreetmaps_location_url <- paste0("https://www.openstreetmap.org/?mlat=",
-                                      params$latitude,
-                                      "&mlon=", params$longitude,
-                                      "#map=19/", params$latitude, "/",
-                                      params$longitude)
-```
-
 
 ![](`r params$bannerurl`)
 
-# Welcome to the **`r params$title` #ReproHack**!
+# Welcome to the **`r params$title`**!
 
 <br>
 
@@ -45,9 +38,51 @@ openstreetmaps_location_url <- paste0("https://www.openstreetmap.org/?mlat=",
 #### :alarm_clock: **`r params$time`**
 
 ##### :round_pushpin: **`r params$room_location`**
-##### :earth_africa: [**`r params$address`**](`r openstreetmaps_location_url`)
+##### :earth_africa: **`r params$address`**
   
-[![Gitter](https://badges.gitter.im/reprohack/community.svg)](https://gitter.im/reprohack/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+
+
+```{r out.width='60%', fig.height=3, eval=require('leaflet'), echo=FALSE, message=FALSE, warning=FALSE}
+library(leaflet)
+library(dplyr)
+
+event_log <- readr::read_csv("data/event-log.csv") %>% 
+    mutate(upcoming =  date >= Sys.Date()) %>%
+    mutate(popup = glue::glue("<h3><a href={url} {title}></h3><br>{date}"),
+           date_f = format(date, format="%a %b %d %Y"))
+
+plot_log <- event_log %>%
+    mutate(color = case_when(upcoming == TRUE ~ "green",
+                             upcoming == FALSE ~ "orange"))
+
+
+#pal <- colorFactor(c("green", "orange"), c(FALSE, TRUE))
+
+make_popup <- function(df){
+    popup_row <- function(x){paste0(
+      "<h3><a href=", x["url"], "> ", x["title"],"</a></h3>", " <br>", 
+      "<strong> Date: </strong>", x["date_f"], "<br>",
+      "<strong> Room: </strong>", x["room"], "<br>",
+      "<strong> Address: </strong>", x["address"], "<br>")}
+    apply(df, 1, popup_row)
+}
+
+icons <- awesomeIcons(
+  icon = 'ios-close',
+  iconColor = 'black',
+  library = 'ion',
+  markerColor = plot_log$color
+)
+
+plot_log %>%
+    leaflet() %>%
+    addProviderTiles("CartoDB.Positron") %>%
+    addAwesomeMarkers(icon = icons, popup = make_popup(plot_log))
+```
+
+  
+[![Slack](https://img.shields.io/badge/slack-join%20us-brightgreen)](https://reprohack-autoinvite.herokuapp.com/)
 
 ***
 
@@ -88,13 +123,13 @@ Join us at the hack to **dig into exciting science**, learn more about **reprodu
 
 This is the master repo of the hack. We'll collect information on the teams and projects through [issues](`r paste0(params$reprohack_repo_url, "/issues/")`) in this repo. We'll track of discussions and collaborative notes on the event [**hackpad**](`r params$hackpad_url`)
 
-As all Carpentries events, we strive to make this event open and inclusive to all. As such the event is governed by the [Carpentries Code of Conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html) and you should read it before participating. By participating, you are expected to uphold this code.
+As all ReproHack events, we strive to make this event open and inclusive to all. As such the event is governed by the [ReproHack Code of Conduct](https://github.com/reprohack/reprohack-hq/blob/master/CODE_OF_CONDUCT.md) and you should read it before participating. By participating, you are expected to uphold this code.
 
 
 
 ### **Authors**
 
-We encourage authors that are keen, to be available for participants to reach out to for guidance or even just to say hello! We've set up a [**gitter channel**](https://gitter.im/reprohack/community) as a public lobby where you can also reach the organisers prior to the hack. You can also start discussions or add comments through our collaborative [**hackpad**](`r params$hackpad_url`).
+We encourage authors that are keen, to be available for participants to reach out to for guidance or even just to say hello! You can do so by joining the **`review-chat`** channel in our [**slack**](https://reprohack-autoinvite.herokuapp.com/) group. We've also set up an **`authors`** channel in our [**slack**](https://reprohack-autoinvite.herokuapp.com/) group as a place where you can also reach the organisers prior to the hack. You can also start discussions or add comments through our collaborative [**hackpad**](`r params$hackpad_url`).
 
 ### **Participants**
 

@@ -1,5 +1,5 @@
 ---
-title: CCMcr19 ReproHack slides
+title: N8 CIR Northern tour ReproHack slides
 tags: ReproHack, introduction, slides
 description: View the slide with "Slide Mode".
 slideOptions:
@@ -9,7 +9,7 @@ slideOptions:
 # Welcome to our ReproHack!
 
 <!-- Put the link to this slide here so people can follow -->
-### Event Repository: bit.ly/CCMcr19-ReproHack
+### Event Repository: http://bit.ly/n8-reprohacks
 
 Contains all event information and links to materials
 
@@ -18,6 +18,9 @@ Contains all event information and links to materials
 ---
 
 # Introductions
+
+<!-- Use this section as an ice-breaker. Introduce yourself, then allow others to 
+go around the room and introduce themselves too -->
 
 ---
 
@@ -28,6 +31,7 @@ Contains all event information and links to materials
 ### Dr Anna Krystalli (@annakrystalli)
 
 - Research Software Engineer _University of Sheffield_
+- 2019 Fellow _Software Sustainability Institute_
 - Software Peer Review Editor _rOpenSci_ 
 - Co-organiser _Sheffield R Users Group_
 
@@ -61,7 +65,7 @@ Stitch!
 
 ---
 
-### Reproduce paper / Hack the ReproHack
+### Reproduce paper
 
 1. **Project review and team formation**
 
@@ -72,83 +76,16 @@ Stitch!
 
 4. **Re-group part-way through.**
 
-6. Feedback at the end (group & authors)
+6. **Feedback at the end (group & authors)**
 
 
----
-
-## Your Work Might be Publishable!
-
----
-
-
-### [ReScience C](http://rescience.github.io/)
-
-> **ReScience C** is an open-access peer-reviewed journal that targets computational research and encourages the **explicit replication** of already published research, promoting new and open-source implementations in order to ensure that the original research is reproducible.
-
----
-
-
-### What is **Replication:** 
-- Repeating a published protocol
-- Respecting its spirit and intentions
--  **Varying the technical details**, e.g. using different software, initial conditions, etc.
-
-***
-
-#### Change something that everyone believes shouldn’t matter, and see if the scientific conclusions are affected 
-
----
-
-### Replicate your paper
-
-- Finished early? Consider attempting **replication**!
-- Replications could be considered for publication in **ReScience C** Journal
-
-
----
-
-#### But! ReScience got in touch and **considering creating a new category!**
-
-- **Reproducibility Report**: 
-    + were results reproduced? 
-    + how hard/easy was it to reproduce? 
-    + did architectures differ etc. 
-    + what else? _discussion topic_
-
----
-
-### Then https://scigen.report got in touch:
-
-![](https://i.imgur.com/7v9VY5R.png)
-
----
-
-![](https://i.imgur.com/NO0QYu4.png)
-
-
----
-
-
-
-# Feed back
-
-# :speech_balloon: 
-
----
-
-### Feed back
-
-- **Regroup part way through** to discuss progress and troubleshoot any sticking points
-- **Feedback to authors** using form by end of session
-- **Feedback to group** at the end, contribute to discussions
 
 ---
 
 
 ## Code of Conduct
 
-Event governed by [**Carpentries Code of Conduct**](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html)
+Event governed by [**ReproHack Code of Conduct**](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html)
 
 <br>
 
@@ -167,53 +104,184 @@ Event governed by [**Carpentries Code of Conduct**](https://docs.carpentries.org
 - #### Show gratitude and appreciation for their effort and bravery. :pray: 
 - #### Constructive criticism only please!
 
+
+---
+
+# Reproduce and Review
+
+# :mag:
+
+---
+
+## Review as an auditor :bookmark_tabs:
+
+---
+
+
+## Access
+
+- How easy was it to gain access to the materials?
+
+## Installation
+
+- How easy / automated was installation?
+- Did you have any problems?
+
+
+## Data
+- Were data clearly separated from code and other items?
+- Were large data files deposited in a trustworthy data repository and referred to using a persistent identifier?
+- Were data documented ...somehow...
+
+---
+
+
+## Documentation
+
+Was there adequate documentation describing:
+- how to install necessary software including non-standard dependencies?
+- how to use materials to reproduce the paper?
+- how to cite the materials, ideally in a form that can be copy and pasted?
+
+
+## Analysis
+
+- Were you able to fully reproduce the paper? :white_check_mark:
+- How automated was the process of reproducing the paper?
+- How easy was it to link analysis code to:
+   - the plots it generates
+   - sections in the manuscript in which it is described
+ 
+### If the analysis was not fully reproducible :no_entry_sign:
+ - Did results (e.g. model outputs, tables, figures) differ to those published? By how much?
+ - Were missing dependencies?
+ - Was the computational environment not adequately described / captured?
+
+---
+
+## Review as a user :video_game:
+
+<br>
+
+#### What did you find easy / intuitive?
+
+
+
+#### What did you find confusing / difficult
+
+
+
+#### What did you enjoy?
+
+---
+
+# Feed back
+
+# :speech_balloon: 
+
+---
+
+
+## Feedback as a community member
+
+<br>
+
+### Acknowledge author effort
+
+### Give feedback in good faith
+
+### Focus on community benefits
+- and system level solutions
+
+---
+
+### Feed back opportunities
+
+- **Regroup part way through** to discuss progress and troubleshoot any sticking points
+- **Feedback to authors** using form by end of session
+- **Feedback to group** at the end, contribute to discussions
+
+---
+
+# Additional activities
+
+---
+
+## Finished early?
+
+
+### Explore the work more deeply:
+- Try and run additional analyses.
+- Create new plots. 
+- Combine materials with your own or other open materials available on the web!
+
+
+### Replicate your paper
+
+- Consider attempting **replication**!
+- Replications could be considered for publication in **ReScience C** Journal
+
+---
+
+## [ReScience C](http://rescience.github.io/)
+
+> **ReScience C** is an open-access peer-reviewed journal that targets computational research and encourages the **explicit replication** of already published research, promoting new and open-source implementations in order to ensure that the original research is reproducible.
+
+
+### What is **Replication:** 
+- Repeating a published protocol
+- Respecting its spirit and intentions
+-  **Varying the technical details**, e.g. using different software, initial conditions, etc.
+
+#### Change something that everyone believes shouldn’t matter, and see if the scientific conclusions are affected 
+
+
 ---
 
 # Let's go! :checkered_flag: 
 
 ---
 
-### Paper / hack topic review
+## 1. Paper review
+
++ Have a look at the papers available for reproduction
 
 
-#### **papers**: bit.ly/CCMcr19-ReproHack-papers
-#### **topics**: bit.ly/CCMcr19-ReproHack-topics
-
----
-
-### Team formation / project registration
+## 2. Team formation / project registration
 
 + Fine to work individually
-+ Register your team and paper / topic by [**opening a new issue**](https://github.com/reprohack/reprohack-2019-06-27/issues/new/choose). bit.ly/CCMcr19-ReproHack
-+ Add your details to the [**hackpad**](https://hackmd.io/@U2KSpBasRLqM0fN-YALVrw/r1LTia9RV/edit).
++ Add your details to the [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit).
++ Register your team and paper on the [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit)
 
----
 
-### Mid-point regroup
 
+## 3. Mid-point regroup
+
+- Which paper have you selected? Briefly describe what it's about.
 - Briefly describe the approach to reproducibility the paper has taken.
-- Anything in particular you like about the paper's approach?
+- Anything in particular you like about the paper's approach so far?
 - Anything you're having difficulty with?
 
 ---
 
-### Feedback to authors
+## 4. Feedback to authors
 
-- Please complete the feedback form for authors bit.ly/CCMcr19-ReproHack-feedback
-- Feel free to take notes on the hackpad
+- **Please complete the feedback form for authors**
+- Feel free to record general findings the hackpad
 
 ---
 
-### Final regroup
+## 5. Final regroup
 
 - So, how did you get on? 
 - Final comments.
 - If there's time, tackle some discussion topics (see hackpad).
-- One thing you liked, one thing that can be improved (use post it's if you prefer)
+- On post-its: One thing you liked, one thing that can be improved.
 
 ---
 
-### Further Resources
+
+## Further Resources
 
 - [**The Turing Way**](https://the-turing-way.netlify.com/introduction/introduction): a lightly opinionated guide to reproducible data science.
 - [**Packaging data analytical work reproducibly using R (and friends)**](https://peerj.com/preprints/3192/): how researchers can improve the reproducibility of their work using research compendia based on R packages and related tools
