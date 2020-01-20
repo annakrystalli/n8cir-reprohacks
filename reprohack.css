@@ -46,3 +46,11 @@ a:active {
     color: white;
     font-weight: bold;
 }
+
+.card {
+  background-color: #ECF0F1;
+  border: 5px solid #2C3D50;
+  padding: 50px;
+  margin: 20px;
+  overflow-wrap: break-word;
+}
