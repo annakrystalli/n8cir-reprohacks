@@ -13,7 +13,7 @@ params:
   hackpad_url: https://hackmd.io/@annakrystalli/n8-reprohack/edit
   intro_slides_url: https://hackmd.io/@annakrystalli/n8-reprohack-intro
   submission_url: https://forms.gle/vMk25vCevMg2QiYQ9
-  feedback_url: https://link-to-feedbackform
+  feedback_url: https://forms.gle/wvXfjNT7HbkqH2Rj7
   paper_shinyapp_url: https://sheffield-university.shinyapps.io/n8cir-reprohacks/
   reprohack_repo_url: https://github.com/annakrystalli/n8cir-reprohacks
 ---
@@ -122,7 +122,7 @@ Join us at the hack to **dig into exciting science**, learn more about **reprodu
 
 ## **On the day**
 
-This is the master repo of the hack. We'll collect information on the teams and projects through [issues](`r paste0(params$reprohack_repo_url, "/issues/")`) in this repo. We'll track of discussions and collaborative notes on the event [**hackpad**](`r params$hackpad_url`)
+This is the master repo of the hack. We'll collect information on the teams and projects, track discussions and collaborative notes on the event [**hackpad**](`r params$hackpad_url`)
 
 As all ReproHack events, we strive to make this event open and inclusive to all. As such the event is governed by the [ReproHack Code of Conduct](https://github.com/reprohack/reprohack-hq/blob/master/CODE_OF_CONDUCT.md) and you should read it before participating. By participating, you are expected to uphold this code.
 

@@ -61,9 +61,7 @@ more\!
 ## **On the day**
 
 This is the master repo of the hack. We’ll collect information on the
-teams and projects through
-[issues](https://github.com/annakrystalli/n8cir-reprohacks/issues/) in
-this repo. We’ll track of discussions and collaborative notes on the
+teams and projects, track discussions and collaborative notes on the
 event [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit)
 
 As all ReproHack events, we strive to make this event open and inclusive
@@ -118,9 +116,10 @@ Follow any instructions/documentation associated with the papers and try
 and reproduce the work. As you work through your paper, keep in mind the
 main points on which feedback to the authors will provided, **Access**,
 **Reproducibility**, **Documentation** and **Reusability**. It might
-help to have a look at the [feedback form](https://link-to-feedbackform)
-before you begin and keep notes during. Feel free to use the event
-hackpad to record general findings you wish to share with the group.
+help to have a look at the [feedback
+form](https://forms.gle/wvXfjNT7HbkqH2Rj7) before you begin and keep
+notes during. Feel free to use the event hackpad to record general
+findings you wish to share with the group.
 
 We’ll **come together during the day** to discuss progress and
 troubleshoot any sticking points.
@@ -144,8 +143,8 @@ and **add any links to such materials to the hackpad**.
 #### **4. Leave feedback for the authors**
 
 Please complete the [**Reproducibility feedback
-form**](https://link-to-feedbackform). Please also remember to be kind
-and constructive. Reproducibilty is hard and all authors submitting
+form**](https://forms.gle/wvXfjNT7HbkqH2Rj7). Please also remember to be
+kind and constructive. Reproducibilty is hard and all authors submitting
 their papers have been incredibly brave. Here’s an
 [example](https://github.com/annakrystalli/write-ups/blob/master/assets/OpenCon_ReproHack%20feedback_form.pdf)
 of feedback to authors.
