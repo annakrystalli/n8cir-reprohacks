@@ -122,6 +122,14 @@ Join us at the hack to **dig into exciting science**, learn more about **reprodu
 
 ## **On the day**
 
+### Materials
+
+- [**Intro Slides**](`r params$intro_slides_url`) Instructions and links
+- [**Paper list**](`r params$paper_shinyapp_url`) List of submitted papers
+- [**Hackpad**](`r params$hackpad_url`) Event collaborative notebook
+- [**Feedback form**](`r params$feedback_url`) Record feedback for authors
+
+
 This is the master repo of the hack. We'll collect information on the teams and projects, track discussions and collaborative notes on the event [**hackpad**](`r params$hackpad_url`)
 
 As all ReproHack events, we strive to make this event open and inclusive to all. As such the event is governed by the [ReproHack Code of Conduct](https://github.com/reprohack/reprohack-hq/blob/master/CODE_OF_CONDUCT.md) and you should read it before participating. By participating, you are expected to uphold this code.

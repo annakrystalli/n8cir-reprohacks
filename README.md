@@ -60,6 +60,19 @@ more\!
 
 ## **On the day**
 
+### Materials
+
+  - [**Intro
+    Slides**](https://hackmd.io/@annakrystalli/n8-reprohack-intro)
+    Instructions and links
+  - [**Paper
+    list**](https://sheffield-university.shinyapps.io/n8cir-reprohacks/)
+    List of submitted papers
+  - [**Hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit)
+    Event collaborative notebook
+  - [**Feedback form**](https://forms.gle/wvXfjNT7HbkqH2Rj7) Record
+    feedback for authors
+
 This is the master repo of the hack. We’ll collect information on the
 teams and projects, track discussions and collaborative notes on the
 event [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit)
