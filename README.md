@@ -63,19 +63,19 @@ more\!
 ### Materials
 
   - [**Intro
-    Slides**](https://hackmd.io/@annakrystalli/n8-reprohack-intro)
+    Slides**](https://annakrystalli.me/n8cir-reprohacks/slides/#1)
     Instructions and links
   - [**Paper
     list**](https://sheffield-university.shinyapps.io/n8cir-reprohacks/)
     List of submitted papers
-  - [**Hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit)
-    Event collaborative notebook
+  - [**Hackpad**](https://bit.ly/remote-reprohack-hackpad) Event
+    collaborative notebook
   - [**Feedback form**](https://forms.gle/wvXfjNT7HbkqH2Rj7) Record
     feedback for authors
 
 This is the master repo of the hack. We’ll collect information on the
 teams and projects, track discussions and collaborative notes on the
-event [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit)
+event [**hackpad**](https://bit.ly/remote-reprohack-hackpad)
 
 As all ReproHack events, we strive to make this event open and inclusive
 to all. As such the event is governed by the [ReproHack Code of
@@ -93,11 +93,11 @@ also set up an **`authors`** channel in our
 [**slack**](https://reprohack-autoinvite.herokuapp.com/) group as a
 place where you can also reach the organisers prior to the hack. You can
 also start discussions or add comments through our collaborative
-[**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit).
+[**hackpad**](https://bit.ly/remote-reprohack-hackpad).
 
 ### **Participants**
 
-#### **Introduction & Welcome** [slides](https://hackmd.io/@annakrystalli/n8-reprohack-intro)
+#### **Introduction & Welcome** [slides](https://annakrystalli.me/n8cir-reprohacks/slides/#1)
 
 #### **1. Paper review and team formation**
 
@@ -110,15 +110,15 @@ participants as you work.
 #### **2. Select and register a paper**
 
   - Add your details in the **participants** section of the
-    [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit) so
-    we have a complete list of participants.
+    [**hackpad**](https://bit.ly/remote-reprohack-hackpad) so we have a
+    complete list of participants.
 
   - In your teams **decide which paper** you wish to work on.
 
   - **Register your team and paper** by logging the title of the
     selected paper and the name(s) of the reviewer(s) in the
-    [**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit).
-    You can use the following template:
+    [**hackpad**](https://bit.ly/remote-reprohack-hackpad). You can use
+    the following template:
     
         ### **Paper:** <Title of the paper reproduced>
         **Reviewers:** Reviewer 1, Reviewer 2 etc.
@@ -173,8 +173,8 @@ You can use the hackpad to take notes and summarise your experiences.
 #### Collaborative note taking:
 
 Feel free to contribute any additional thoughts on our collaborative
-[**hackpad**](https://hackmd.io/@annakrystalli/n8-reprohack/edit). These
-can help form the basis for a blogpost on the
+[**hackpad**](https://bit.ly/remote-reprohack-hackpad). These can help
+form the basis for a blogpost on the
 event.
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This
