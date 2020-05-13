@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>.left[ Welcome to the N8 CIR Remote ReproHack]</title>
+    <meta charset="utf-8" />
+    <meta name="author" content=".left[14th May 2020]" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# .left[<img src='https://github.com/reprohack/reprohack-hq/raw/master/hex/reprohack.png' height=200px><br/>Welcome to the N8 CIR Remote ReproHack]
+## .left[<br><br>Please Sign in on the Hackpad: <em>bit.ly/remote-reprohack-hackpad</em>]
+### .left[14th May 2020]
+
+---
+
+class: inverse
+
+
+
+
+## Welcome to the N8 CIR Remote ReproHack!
+### ***Part of the "Northern Tour" Series***
+&lt;!-- Put the link to this slide here so people can follow --&gt;
+
+***
+
+### Event Hackpad: 
+### [bit.ly/remote-reprohack-hackpad](https://bit.ly/remote-reprohack-hackpad)
+
+Contains all event information and links to materials
+
+
+### 👋 from the whole ReproHack team
+
+#### _Anna, Daniela, Florencia, Linda, Paloma, Ricci_
+
+---
+
+## ReproHack hackpad ➡️   [hackmd.io](https://hackmd.io/s/features) notepad
+
+
+&lt;img src="assets/hackmd.png" width="90%" /&gt;
+
+
+
+---
+class: inverse, center, middle
+
+# Agenda
+
+---
+
+### Morning
+
+**10:00 Welcome**
+- **Intro to Blackboard Collaborate**
+- Ice breaker (split into rooms)
+
+**10:20 📢 Daniel Nüst** ***Research compendia enable code review during peer review*** 
+
+**10:45 Introduction &amp; tips for reviewing**
+
+
+***11:00 Reprohack***
+- **Review list, form groups, select papers (break-out rooms)**
+- **COFFEE BREAK** 
+- Work on papers 
+
+---
+
+### Lunchtime
+
+**12:10 Regroup: get someone from each group to tell us a bit about their experiences.**
+
+**12:30 LUNCH BREAK**
+
+**13:30 📢 Daniel Pique -** ***How I discovered a missing data point in a paper with 8000+ citations***
+
+***13:45 Reprohack***
+- Work on papers (break-out rooms)
+
+---
+
+### Afternoon
+***Reprohack***
+
+- Work on papers (break-out rooms)
+- 14:45 COFFEE BREAK 🏠 ☕
+- Work on papers - **Complete feedback form**
+
+**16:00 Regroup - get someone from each group to tell us a bit about their experiences.**
+
+**16:30 📢 Sarah Gibson -** ***Sharing Reproducible Computational Environments with Binder***
+
+**16:50 Closing**
+
+
+---
+class: inverse
+
+# House Keeping:
+
+***
+
+## Tour of Blackboard Collaborate
+
+&gt; ### Linda Nab
+
+
+---
+class: inverse
+
+## Welcome back!
+
+***
+
+# Ice breaker:  Introductions
+
+&lt;!-- Use this section as an ice-breaker. Introduce yourself, then allow others to 
+go around the room and introduce themselves too --&gt;
+
+---
+
+&lt;!-- Add details about yourself the organiser here: --&gt;
+
+## Who am I?
+
+&gt; ### Dr Anna Krystalli (@annakrystalli)
+&gt; 
+&gt; - Research Software Engineer _University of Sheffield_
+&gt;
+&gt; - 2019 Fellow _Software Sustainability Institute_
+&gt;
+&gt; - Software Peer Review Editor _rOpenSci_ 
+&gt;
+&gt; - Co-organiser _Sheffield R Users Group_
+
+---
+
+## Why am I here?
+
+&gt; I believe there's lots to learn about Reproducibility from working with other people's materials and engaging with real published research code and data.
+
+---
+
+## Who is my favorite animated character?
+
+&gt; Stitch!
+&gt;
+&gt; ![](https://media3.giphy.com/media/95MU6SEzeLnUc/giphy.gif?cid=790b76115d11033236595055776d483b&amp;rid=giphy.gif)
+
+
+---
+class: inverse
+
+# Let's hear from the ReproHack Team!
+
+---
+
+&lt;!-- Open it up to participants --&gt;
+# Your turn
+
+### in break-out rooms (7 mins)
+
+&gt; - ### Who are you?
+
+&gt; - ### Why are you here?
+
+&gt; - ### Who is your favorite animated character?
+
+--
+
+### As a group
+
+&gt; ### Name your room! 🏔🏕🏜🎢🏞🏟🏰🗼🌅🏝
+
+
+---
+class: inverse
+
+## 📢 Daniel Nüst  
+
+&gt; ### *"Research compendia enable code review during peer review"*
+
+---
+class: inverse
+
+## Welcome back!
+
+***
+
+# Tips for Reproducing &amp; Reviewing
+
+---
+
+## ReproHack Objectives
+
+1. **Practical Experience in Reproducibility**
+
+3. **Feedback to Authors**
+
+5. **Think more broadly about opportunities and challenges**
+
+
+---
+
+
+.pull-left[
+
+## Code of Conduct
+
+Event governed by **ReproHack Code of Conduct** [bit.ly/reprohack-coc](https://bit.ly/reprohack-coc)
+
+&lt;img src="assets/1728_TURI_Book sprint_7 community_040619.jpg" width="3307" /&gt;
+
+]
+
+
+--
+.pull-right[
+### Additional Considerations
+
+- #### Reproducibility is hard!
+- #### Submitting authors are incredibly brave!
+
+### Thank you Authors! 🙌 
+
+- #### Without them there would be no ReproHack.
+- #### Show gratitude and appreciation for their efforts. 🙏 
+- #### Constructive criticism only please!
+
+]
+---
+class: inverse, center, middle
+
+# Reproduce and Review
+
+# 🔍
+
+---
+
+## Selecting Papers
+
+.pull-left[
+- **Information submitted by authors:**
+
+  - Languages / tools used
+  
+  - Why you should attempt the paper.
+  
+- **No. attempts:** No. times reproduction has been attempted
+
+- **Mean Repro Score:** Mean reproducibility score (out of 10)
+    - lower == harder!
+    
+- Register paper using template in hackpad:
+    ```
+    ### **Paper:** &lt;Title of the paper reproduced&gt;
+    **Reviewers:** Reviewer 1, Reviewer 2 etc.
+    ```
+]
+
+
+.pull-right[
+&lt;img src="assets/ReprohackPickPapers.jpg" width="1971" /&gt;
+]
+
+
+---
+class: inverse, center, middle
+
+# Review as an auditor 📑
+
+
+&lt;img src="assets/FAIRPrinciples.jpg" width="80%" /&gt;
+
+---
+
+.pull-left[
+## Access
+
+- How **easy** was it to **gain** access to the materials?
+- Did you manage to download all the files you needed?
+
+
+## Installation
+
+- How **easy / automated** was **installation**?
+- Did you have any problems?
+- How did you solve them?
+]
+
+--
+
+
+.pull-right[
+
+## Data
+- Were **data clearly separated from code and other items**?
+- Were **large data files deposited in a trustworthy data repository** and referred to using a **persistent identifier**?
+- Were **data documented** ...somehow...
+
+## Documentation
+
+Was there **adequate documentation** describing:
+- how to **install** necessary software including non-standard dependencies?
+- how to **use** materials to reproduce the paper?
+- how to **cite** the materials, ideally in a form that can be copy and pasted?
+
+]
+---
+
+.pull-left[
+
+# Analysis
+
+- **Were you able to fully reproduce** the paper? ✅
+
+- **How automated** was the process of reproducing the paper?
+
+- **How easy was it to link** analysis **code** to:
+   - the **plots** it generates
+   - **sections in the manuscript** in which it is described and results reported
+]
+--
+
+.pull-right[
+
+&lt;br&gt;
+
+### If the analysis was not fully reproducible 🚫
+ - Were there **missing dependencies?**
+ 
+ - Was the **computational environment not adequately described** / captured?
+ 
+ - Was there **bugs** in the code?
+ 
+ - Did **code run but results (e.g. model outputs, tables, figures) differ** to those published? By **how much?**
+]
+
+---
+class: inverse, center, middle
+
+# Review as a user 🎮
+
+
+---
+## Review as a user 🎮
+
+&lt;br&gt;
+
+#### What did you find easy / intuitive?
+&gt; Was the file structure and file naming informative / intuitive?
+&gt; Was the analysis workflow easy to follow? 
+&gt; Was there missing / confusing documentation?
+
+
+#### What did you find confusing / difficult
+&gt; Identify pressure points. Constructive suggestions?
+
+
+
+#### What did you enjoy?
+&gt; Identify aspects that worked well.
+
+---
+class: inverse, center, middle
+
+# Feed back
+
+# 💬
+
+---
+
+
+## Feedback as a community member
+
+.pull-left[
+
+#### Acknowledge author effort
+
+#### Give feedback in good faith
+
+#### Focus on community benefits and system level solutions
+
+
+&lt;img src="assets/1728_TURI_Book sprint_11 community_040619.jpg" width="80%" /&gt;
+
+]
+.pull-right[
+
+&gt; #### _Help build convention on what a Research Compendium should be and how we should be able to use it_
+
+&lt;img src="assets/ResearchCompendium.jpg" width="80%" /&gt;
+
+
+]
+
+---
+class: inverse, center, middle
+
+# Additional activities
+
+---
+
+## Finished early?
+
+### Explore the work more deeply:
+
+- Try and run additional analyses.
+
+- Create new plots. 
+
+- Combine materials with your own or other open materials available on the web!
+
+---
+class: inverse, center, middle
+
+# Resources
+
+---
+
+## Resources
+
+- [**The Turing Way**](https://the-turing-way.netlify.com/introduction/introduction): a lightly opinionated guide to reproducible data science.
+
+- [**Statistical Analyses and Reproducible Research**](): Gentleman and Temple Lang's introduction of the concept of Research Compendia
+
+- [**Packaging data analytical work reproducibly using R (and friends)**](https://peerj.com/preprints/3192/): how researchers can improve the reproducibility of their work using research compendia based on R packages and related tools
+
+- [How to Read a Research Compendium](https://arxiv.org/pdf/1806.09525.pdf): Introduction to existing conventions for research compendia and suggestions on how to utilise their shared properties in a structured reading process.
+
+- [Reproducible Research in R with rrtools](https://annakrystalli.me/rrtools-repro-research/): Workshop: Create a research compendium around materials associated with a published paper (text, data and code) using `rrtools`.  
+  - [**Example Compendium**](https://github.com/annakrystalli/rrcompendiumDTB): Demo Research compendium 
+---
+
+
+### Participation guidelines
+
+#### During talks information sessions and regroups
+- Please stay on mute until you are invited to speak.
+- Add questions for speakers on the hackpad
+
+#### During break out work 
+- Try and engage as much as possible.
+- Feel free to mute, turn off camera and disconnect if you need to.
+- Feel free to move around and go say hello or help out in other rooms.
+- We encourage discussions in the break-out rooms but be mindful of others trying to work. The **main room** and **cafe** are always available for hanging out.
+
+### At any time
+- Feel free to add to the collaborative notes on the hackpad
+- Contact facilitators through the main chat
+
+
+---
+class: inverse
+
+# Let's go! 🏁
+
+## 11:00 - 11:15
+
+### 🔎 Paper List review
+
++ Have a look at the papers available for reproduction
+
+
+### 👥 Team formation / project registration
+
++ Fine to work individually
++ Add your details to the [**hackpad: bit.ly/remote-reprohack-hackpad**](https://bit.ly/remote-reprohack-hackpad).
++ Register your team and paper on the [**hackpad: bit.ly/remote-reprohack-hackpad**](https://bit.ly/remote-reprohack-hackpad)
+
+### 🏠☕Grab a coffee! 
+
+---
+class: inverse
+
+## 11:15 - 12:15 💻 ReproHack I 
+### (break-out rooms) 
+
+Work on your papers. Feel free to discuss papers and collaboratively troubleshoot problems. Reach out through the main chat for help outside the group. Feel free to move groups or hang out in the main *room* or *cafe.* 
+
+&gt; ### Before Lunch-time Regroup 💭
+&gt; #### Summarise group experiences
+&gt; - What approaches to reproducibility the papers taken.
+&gt; - Anything in particular you like about the approaches so far?
+&gt; - Anything you're having difficulty with?
+
+---
+class: inverse
+
+## 12:10 - 12:30 💬 Lunch regroup 
+
+### Welcome back
+
+***
+
+### Feedback group experiences
+
+---
+class: inverse
+
+## 12:30 - 13:30 🥗🌯 LUNCH 
+
+Feel free to disconnect or hang out in the main *room* or *cafe.* 
+
+### Be back for the Second talk at 13:30
+
+---
+class: inverse
+
+## 📢 Daniel Pique  
+
+&gt; ### *"How I discovered a missing data point in a paper with 8000+ citations"*
+
+
+---
+class: inverse
+
+## 13:50 - 16:00  💻 ReproHack II &amp; III 
+### (break-out rooms) 
+
+### 14:45 - 15:00 COFFEE BREAK 🏠☕
+
+Work on your papers. Feel free to discuss papers and collaboratively troubleshoot problems. Reach out through the main chat for help outside the group. Feel free to move groups or hang out in the main *room* or *cafe.* 
+
+&gt; ### Before Final-time Regroup 💭
+&gt; #### Complete author feedback form ✍️
+&gt; - Discuss how you got on with your papers?
+&gt; - Summarise final experiences of the group in hackpad
+
+---
+class: inverse
+
+## 16:00 - 16:30 Final regroup 💬
+
+- So, how did the groups get on? 
+
+- Final comments.
+
+
+- On hackpad: **Feedback**
+  + One thing you liked
+  + One thing that can be improved.
+
+---
+class: inverse
+
+## 📢 Sarah Gibson  
+
+&gt; ### *"Sharing Reproducible Computational Environments with Binder"*
+
+---
+class: inverse, center, middle
+
+# Closing Remarks
+
+---
+## Did you enjoy ReproHacking?
+
+# Get involved!
+
+
+### [reprohack/reprohack-hq](https://github.com/reprohack/reprohack-hq) GH repository
+
+#### Check out our [issues](https://github.com/reprohack/reprohack-hq/issues)
+
+
+#### Chat to us:
+
+[![Slack](https://img.shields.io/badge/slack-join%20us-brightgreen)](https://reprohack-autoinvite.herokuapp.com/)
+
+
+### Host your own event!
+### Submit your own papers!
+
+---
+## Many ways to ReproHack!
+
+
+&lt;img src="assets/workflow.png" width="80%" /&gt;
+
+
+
+---
+
+# THANK YOU ALL! 🙏
+
+- ### Thank you PARTICIPANTS for coming!
+- ### Thank you AUTHORS for submitting!
+- ### Thank to the N8 CIR for sponsoring!
+
+
+# 👋
+
+---
+
+# Acknowledgements
+
+Images throughout the slides watermarked with **Scriberia** were created by [Scriberia](https://www.scriberia.co.uk/) for The Turing Way community and is used under a CC-BY licence 
+- _The Turing Way Community, &amp; Scriberia. (2019, July 11). Illustrations from the Turing Way book dashes. Zenodo. http://doi.org/10.5281/zenodo.3332808_
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"dev": "svg",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": ""
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
