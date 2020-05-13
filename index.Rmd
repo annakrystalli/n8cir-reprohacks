@@ -14,7 +14,7 @@ params:
   latitude: 53.38119
   longitude: -1.48036
   registration_url: https://n8cir.org.uk/news/reprohacks/ 
-  hackpad_url: https://hackmd.io/@annakrystalli/n8-reprohack/edit
+  hackpad_url: https://bit.ly/remote-reprohack-hackpad
   submission_url: https://forms.gle/vMk25vCevMg2QiYQ9
   reprohack_repo_url: https://github.com/annakrystalli/n8cir-reprohacks
   submission_form_title: "ReproHack Paper Submission Form - n8"
@@ -87,7 +87,7 @@ if(!is.null(params$registration_url)){
 [![Slack](https://img.shields.io/badge/slack-join%20us-brightgreen)](https://reprohack-autoinvite.herokuapp.com/)
 
 
-##### [workshop repository](`r params$reprohack_repo_url`): containing details for participants
+##### [ReproHack hackpad](`r params$hackpad_url`): containing details for participants
 
 ***
 
