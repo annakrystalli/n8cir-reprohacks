@@ -17,7 +17,8 @@ params:
   hackpad_url: https://hackmd.io/@annakrystalli/n8-reprohack/edit
   submission_url: https://forms.gle/vMk25vCevMg2QiYQ9
   reprohack_repo_url: https://github.com/annakrystalli/n8cir-reprohacks
-  submission_form_title: ReproHack Paper Submission Form - n8
+  submission_form_title: "ReproHack Paper Submission Form - n8"
+  feedback_form_title: "ReproHack feedback form - n8"
 runtime: shiny
 ---
 
@@ -173,7 +174,8 @@ wellPanel(a("Nominate Paper", class = "btn btn-primary btn-md",
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, eval=require('googlesheets4')}
 library(googlesheets4)
-options(gargle_oauth_cache = ".secrets")
+options(gargle_oauth_cache = ".secrets",
+        gargle_oauth_email = "annakrystalli@googlemail.com")
 ```
 
 ```{r, echo=FALSE}
@@ -198,8 +200,39 @@ print_contact_links <- function(responses, i){
 
 
 ```{r, message=FALSE, results='asis', warning=FALSE,  echo=FALSE}
+match_length <- 30
+
 responses_gs <- sheets_find(paste(params$submission_form_title))
-responses <- sheets_read(responses_gs)
+responses <- sheets_read(responses_gs) %>% 
+    dplyr::mutate(match_name = stringr::str_trunc(.data$`Paper title`, match_length) )
+
+
+
+
+
+# load feedback
+feedback_gs <- sheets_find(paste(params$feedback_form_title))
+feedback <- sheets_read(feedback_gs) %>% 
+    dplyr::mutate(match_name = stringr::str_trunc(.data$`Which paper did you attempt?`, match_length) )
+
+responses_joined <- fuzzyjoin::stringdist_left_join(feedback, responses, 
+                                             by = c(match_name = "match_name"),
+                                             max_dist = 10,
+                                             method = "qgram",
+                                             #method = "cosine",
+                                             ignore_case = TRUE) %>%
+    dplyr::select(.data$`Paper title`,
+                  .data$`Which paper did you attempt?`, dplyr::everything()) %>%
+    assertr::verify(!is.na(.data$`Which paper did you attempt?`))
+
+stats <- dplyr::group_by(responses_joined, .data$`Paper title`) %>%
+    dplyr::summarise(no_attempts = dplyr::n(),
+                     mean_repro = mean(.data$`On a scale of 1 to 10, how much of the paper did you manage to reproduce?`) %>%
+                         round())
+
+
+responses <- dplyr::left_join(responses, stats)
+
 
 row_n <- nrow(responses)
 set.seed(params$latitude * params$longitude)
@@ -216,6 +249,10 @@ if(row_n > 0){
     cat("### **", j,". ", as.character(responses[i, "Paper title"]), "**", "\n", "\n", sep = "")
     cat("**", gsub("\n", "", gsub("[*]", "", as.character(responses[i, "Paper citation"]))), "\n**", "\n", "\n", sep = "")
     cat("##### *submitted by ", as.character(responses[i, "Name"]),  print_contact_links(responses, i), "*", "\n")
+    if(!is.na(responses[i, "no_attempts"])){
+    cat("*No. attempts <i class='fa fa-recycle'/>* ", as.character(responses[i, "no_attempts"]), "\n") 
+      cat("*Mean Repro Score <i class='fas fa-check-circle' />* ", as.character(responses[i, "mean_repro"]), "/10 \n\n")
+    }
     cat('\n')
     cat('\n')
     cat("**Why should we attempt to reproduce this paper?**", "\n", "\n")
