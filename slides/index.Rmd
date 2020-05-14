@@ -15,8 +15,7 @@ output:
       slideNumberFormat: ""
 ---
 class: inverse
-background-image: url(assets/background.jpg)
-background-slide
+
 
 ```{r xaringan-themer, include = FALSE}
 library(xaringanthemer)
@@ -31,21 +30,6 @@ style_duo_accent(primary_color = "#2D896B", secondary_color = "#46CC97",
   title_slide_background_image = "assets/background.jpg"
 )
 ```
-
-<img src='https://github.com/reprohack/reprohack-hq/raw/master/hex/reprohack.png' height=200px>
-
-<br/>
-
-# Welcome to the N8 CIR Remote ReproHack
-#### 14th May 2020
-
-<br><br>
-
-### Please Sign in on the Hackpad: _bit.ly/remote-reprohack-hackpad_]"
-
-
----
-
 
 
 ## Welcome to the N8 CIR Remote ReproHack!
@@ -211,6 +195,9 @@ class: inverse
 class: inverse
 
 ## `r emo::ji("loudspeaker")` Daniel Nüst  
+#### _Researcher at Spatio-temporal Modelling Lab at the Institute for Geoinformatics (ifgi) at the University of Münster. _
+
+<br>
 
 > ### *"Research compendia enable code review during peer review"*
 
@@ -635,6 +622,9 @@ class: inverse
 class: inverse
 
 ## `r emo::ji("loudspeaker")` Sarah Gibson  
+### _Research Software Engineer at the Alan Turing Institute_
+
+<br>
 
 > ### *"Sharing Reproducible Computational Environments with Binder"*
 
