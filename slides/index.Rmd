@@ -250,9 +250,12 @@ knitr::include_graphics("assets/1728_TURI_Book sprint_7 community_040619.jpg")
 ---
 class: inverse, center, middle
 
-# Reproduce and Review
+# `r emo::ji("mag")` Reproducing & Reviewing
 
-# `r emo::ji("mag")`
+
+```{r, echo=FALSE, out.width="70%"}
+knitr::include_graphics("assets/Hackathon.jpg")
+```
 
 ---
 
@@ -265,9 +268,10 @@ class: inverse, center, middle
   
   - Why you should attempt the paper.
   
-- **No. attempts:** No. times reproduction has been attempted
+- **No. attempts `r icon::fa('recycle')`** No. times reproduction has been attempted
 
-- **Mean Repro Score:** Mean reproducibility score (out of 10)
+- **Mean Repro Score `r icon::fa('check-circle')`** Mean reproducibility score (out of 10)
+
     - lower == harder!
     
 - Register paper using template in hackpad:
@@ -291,6 +295,20 @@ class: inverse, center, middle
 # Review as an auditor `r emo::ji("bookmark_tabs")`
 
 
+--
+
+#### **tl;dr: Don't be this guy!**
+
+```{r, echo=FALSE, out.width="60%"}
+knitr::include_graphics("https://www.reactiongifs.com/r/O_o.gif")
+```
+
+
+---
+class:centers
+
+# `r emo::ji("mag")` For FAIR materials
+
 ```{r, echo=FALSE, out.width="80%"}
 knitr::include_graphics("assets/FAIRPrinciples.jpg")
 ```
@@ -298,34 +316,55 @@ knitr::include_graphics("assets/FAIRPrinciples.jpg")
 ---
 
 .pull-left[
-## Access
+
+# Access
 
 - How **easy** was it to **gain** access to the materials?
+
 - Did you manage to download all the files you needed?
 
-
-## Installation
-
-- How **easy / automated** was **installation**?
-- Did you have any problems?
-- How did you solve them?
 ]
 
 --
 
+.pull-right[
+
+# Installation
+
+- How **easy / automated** was **installation**?
+
+- Did you have any problems?
+
+- How did you solve them?
+]
+
+--- 
+---
+
+.pull-left[
+
+
+# Data
+
+- Were **data clearly separated from code and other items**?
+
+- Were **large data files deposited in a trustworthy data repository** and referred to using a **persistent identifier**?
+
+- Were **data documented** ...somehow...
+
+]
+
+--
 
 .pull-right[
 
-## Data
-- Were **data clearly separated from code and other items**?
-- Were **large data files deposited in a trustworthy data repository** and referred to using a **persistent identifier**?
-- Were **data documented** ...somehow...
-
-## Documentation
+# Documentation
 
 Was there **adequate documentation** describing:
 - how to **install** necessary software including non-standard dependencies?
+
 - how to **use** materials to reproduce the paper?
+
 - how to **cite** the materials, ideally in a form that can be copy and pasted?
 
 ]
@@ -363,6 +402,32 @@ Was there **adequate documentation** describing:
 class: inverse, center, middle
 
 # Review as a user `r emo::ji("video_game")`
+
+--
+
+.pull-left[
+
+### New User
+
+```{r, echo=FALSE, out.width="80%"}
+knitr::include_graphics("https://25.media.tumblr.com/30906cccedfe97a3d5450a23359ca298/tumblr_ml72i2eL6t1rsudnqo1_500.gif")
+```
+
+
+]
+
+--
+
+.pull-right[
+
+### Invested User
+
+```{r, echo=FALSE, out.width="80%"}
+knitr::include_graphics("https://media.giphy.com/media/9K2nFglCAQClO/source.gif")
+```
+
+
+]
 
 
 ---
