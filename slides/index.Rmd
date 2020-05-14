@@ -1,12 +1,12 @@
 ---
-title: ".left[<img src='https://github.com/reprohack/reprohack-hq/raw/master/hex/reprohack.png' height=200px><br/>Welcome to the N8 CIR Remote ReproHack]"
-subtitle: ".left[<br><br>Please Sign in on the Hackpad: _bit.ly/remote-reprohack-hackpad_]"
-author: ".left[14th May 2020]"
+title: "Welcome to the N8 CIR Remote ReproHack<br><img src='https://github.com/reprohack/reprohack-hq/raw/master/hex/reprohack.png' height=200px>"
+author: "<br>**Please Sign in on the Hackpad:** <br>_bit.ly/remote-reprohack-hackpad_"
 output:
   xaringan::moon_reader:
     css: [xaringan-themer.css]
     lib_dir: libs
     nature:
+      titleSlideClass: ["left"]
       beforeInit: "https://platform.twitter.com/widgets.js"
       dev: svg
       highlightStyle: github
